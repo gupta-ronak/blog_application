@@ -1,0 +1,16 @@
+<h2>All Your Articles</h2>
+<p>Welcome <%= @account.user.name%></p>
+
+<% if @account.user.articles.empty? %>
+  <p>No Articles Written</p>
+<% elsif%>
+<ul>
+  <% @account.user.articles.each do |article|%>
+    <li>
+      <%= article.title %>
+    </li>
+
+  <% end%>
+</ul>
+<% end %>
+<%= link_to "New Article", "/article/new" %>
