@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "article#index"
   get "article/new", to: "article#new"
-  post "/article", to: "article#create"
+  post "/article/create", to: "article#create"
+  get "article/:id",to: "article#show"
 end
