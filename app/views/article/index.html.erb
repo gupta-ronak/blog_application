@@ -7,7 +7,9 @@
 <ul>
   <% @account.user.articles.each do |article|%>
     <li>
+      <a href="/article/<%= article.id%>">
       <%= article.title %>
+      </a>
     </li>
 
   <% end%>
